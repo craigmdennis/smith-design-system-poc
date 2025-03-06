@@ -1,0 +1,93 @@
+// Colors
+$black: rgba(0, 18, 26, 1);
+$dark-gray: rgba(120, 126, 133, 1);
+$gray-blue-dark: rgba(97, 129, 144, 1);
+$gray-blue-light: rgba(247, 249, 250, 1);
+$gray: rgba(178, 184, 191, 1);
+$gray-alt: rgba(138, 147, 151, 1);
+$gray-med: rgba(206, 212, 218, 1);
+$green: rgba(62, 168, 102, 1);
+$light-blue: rgba(228, 239, 247, 1);
+$light-gray: rgba(233, 236, 238, 1);
+$light-green: rgba(59, 191, 112, 1);
+$pale-orange: rgba(255, 207, 153, 1);
+$primary: rgba(30, 159, 214, 1);
+$red: rgba(223, 44, 69, 1);
+$smith: rgba(211, 82, 36, 1);
+$teal: rgba(233, 246, 251, 1);
+$white: rgba(255, 255, 255, 1);
+$yellow: rgba(255, 255, 0, 1);
+$nav-background: rgba(31, 46, 53, 1);
+
+// Derived colors
+$available-color: $green;
+$border-color: $light-gray;
+$border-color-highlight: rgba(230, 219, 185, 1);
+$border-color-dark: transparentize($black, 0.76); //rgba(0, 18, 26, .24)
+$secondary: $gray-blue-dark;
+$text-muted: transparentize($black, 0.42); // rgba(0, 18, 26, 0.58)
+$text-primary: transparentize($black, 0.07); // rgba(0, 18, 26, 0.93)
+$text-white-muted: transparentize($white, 0.18); // rgba(255, 255, 255, 0.82)
+$unavailable-color: $red;
+$light-highlight-color: rgba(255, 243, 205, 1);
+$logged-out-color: $gray;
+$updating-status-color: $yellow;
+$divider-light: rgba(0, 18, 26, 0.12);
+$shadow: rgba(0, 0, 0, 0.1);
+$alert-warning-color: rgba(0, 18, 26, 0.75);
+$alert-warning-background-color: #fff3cd;
+$alert-warning-border-color: rgba(0, 0, 0, 0.1);
+
+// Phase 2 branding colors (currently only in use during onboarding)
+$product-background-color: #f5f0e7;
+$product-color: #d35224;
+
+// funnel
+$color-btn-funnel: #c64110;
+$color-btn-funnel-hover: #a0340d;
+$color-label-detail: #85857a;
+
+// Export smith color palette.
+// scss-lint:disable PropertySpelling
+:export {
+  black: $black;
+  darkGray: $dark-gray;
+  grayBlueDark: $gray-blue-dark;
+  grayBlueLight: $gray-blue-light;
+  gray: $gray;
+  green: $green;
+  lightBlue: $light-blue;
+  lightGrey: $light-gray;
+  lightGreen: $light-green;
+  paleOrange: $pale-orange;
+  primary: $primary;
+  red: $red;
+  smith: $smith;
+  teal: $teal;
+  white: $white;
+  yellow: $yellow;
+  navBackground: $nav-background;
+  availableColor: $available-color;
+  borderColor: $border-color;
+  secondary: $secondary;
+  textMuted: $text-muted;
+  textPrimary: $text-primary;
+  textWhiteMuted: $text-white-muted;
+  unavailableColor: $unavailable-color;
+  loggedOutColor: $logged-out-color;
+  updatingStatusColor: $updating-status-color;
+  dividerLight: $divider-light;
+  shadow: $shadow;
+}
+
+// Bootstrap Theme Overrides (SCSS-only)
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $gray-blue-dark,
+  "danger": $red,
+  "success": $green,
+  "warning": $yellow,
+  "info": $light-blue,
+  "dark": $black,
+  "light": $light-gray,
+);
