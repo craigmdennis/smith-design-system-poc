@@ -1,5 +1,5 @@
 // Override Bootstrap variables BEFORE importing Bootstrap
-@import "./_colors.scss";
+@import "./_colors.module.scss";
 
 // Import Bootstrap SCSS **after** variables are set
 @import "../../node_modules/bootstrap/scss/bootstrap";

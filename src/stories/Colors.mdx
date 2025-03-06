@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/addon-docs';
+import { ColorItem, ColorPalette } from '@storybook/addon-docs/blocks';
+import colors from '../assets/_colors.module.scss';
+
+<Meta title="Design Tokens/Colors" />
+
+# 🎨 Color Palette
+
+These colors are **automatically pulled from SCSS**, ensuring Storybook stays up to date.
+
+<h1>Test</h1>
+
+<ColorPalette>
+  {Object.entries(colors).map(([name, value]) => (
+    <ColorItem 
+      key={name} 
+      title={name} 
+      subtitle={value} 
+      colors={{ [name]: value }} 
+    />
+  ))}
+</ColorPalette>

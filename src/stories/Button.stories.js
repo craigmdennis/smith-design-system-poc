@@ -1,10 +1,17 @@
-import { BButton } from "bootstrap-vue-next";
+import { BButton, BButtonGroup } from "bootstrap-vue-next";
 
 export default {
-  title: "BootstrapVue/Buttons",
+  title: "Buttons",
   component: BButton,
+  args: {
+    label: "Click Me",
+    variant: "primary",
+    size: "md",
+    disabled: false,
+    block: false,
+  },
   argTypes: {
-    label: { control: "text", defaultValue: "Click Me" },
+    label: { control: "text" },
     variant: {
       control: { type: "select" },
       options: [
@@ -17,15 +24,13 @@ export default {
         "light",
         "dark",
       ],
-      defaultValue: "primary",
     },
     size: {
       control: { type: "select" },
       options: ["sm", "md", "lg"],
-      defaultValue: "md",
     },
-    disabled: { control: "boolean", defaultValue: false },
-    block: { control: "boolean", defaultValue: false },
+    disabled: { control: "boolean" },
+    block: { control: "boolean" },
   },
 };
 
@@ -38,10 +43,16 @@ const Template = (args) => ({
 });
 
 export const Default = Template.bind({});
-Default.args = {
-  label: "Click Me",
-  variant: "primary",
-  size: "md",
-  disabled: false,
-  block: false,
-};
+
+export const AllVariants = () => ({
+  components: { BButton, BButtonGroup },
+  template: `
+    <BButtonGroup>
+      <BButton v-for="variant in ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']"
+        :key="variant"
+        :variant="variant">
+        {{ variant.charAt(0).toUpperCase() + variant.slice(1) }}
+      </BButton>
+    </BButtonGroup>
+  `,
+});
